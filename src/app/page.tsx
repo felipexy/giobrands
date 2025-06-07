@@ -1,4 +1,13 @@
-import { Header, Hero, AboutSection, ProjectsSection } from "@/components";
+import {
+  Header,
+  Hero,
+  StatsSection,
+  AboutSection,
+  ProjectsSection,
+  TestimonialSection,
+  FeaturedProjectsSection,
+  AboutAuthorSection,
+} from "@/components";
 
 export default function Home() {
   return (
@@ -7,6 +16,10 @@ export default function Home() {
       <Hero />
       <AboutSection />
       <ProjectsSection />
+      <TestimonialSection />
+      <FeaturedProjectsSection />
+      <AboutAuthorSection />
+      <StatsSection />
     </div>
   );
 }

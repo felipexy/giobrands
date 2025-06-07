@@ -17,11 +17,11 @@ export default function ProjectsSection() {
 
   return (
     <section className="px-24 py-16">
-      <h2 className="text-lg font-medium text-gray-900 mb-9 tracking-wide">
+      <h2 className="text-base font-medium text-gray-900 mb-9 tracking-wide">
         ÚLTIMOS PROJETOS
       </h2>
 
-      <div className="grid grid-cols-2 gap-6 max-w-6xl">
+      <div className="grid grid-cols-2 gap-3 max-w-6xl">
         {/* Render project cards */}
         {featuredProjects.map((project) => (
           <ProjectCard

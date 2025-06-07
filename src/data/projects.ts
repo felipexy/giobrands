@@ -3,7 +3,7 @@ import { Project } from "@/types";
 export const featuredProjects: Project[] = [
   {
     id: 1,
-    imageSrc: "/assets/jpgs/nyx-project.jpg",
+    imageSrc: "/assets/jpgs/projects/nyx/nyx-cover.jpg",
     imageAlt: "NYX Project - Branding and visual identity design",
     title: "NYX",
     subtitle: "(BRASIL)",
@@ -12,7 +12,7 @@ export const featuredProjects: Project[] = [
   },
   {
     id: 2,
-    imageSrc: "/assets/jpgs/dona-varda-project.jpg",
+    imageSrc: "/assets/jpgs/projects/dona-varda/dona-varda-cover.jpg",
     imageAlt: "Hero Project - Premium branding experience",
     title: "HERO PROJECT",
     subtitle: "(BRASIL)",
@@ -21,7 +21,7 @@ export const featuredProjects: Project[] = [
   },
   {
     id: 3,
-    imageSrc: "/assets/jpgs/thiber-project.jpg",
+    imageSrc: "/assets/jpgs/projects/thiber/thiber-cover.jpg",
     imageAlt: "NYX Project Variant - Creative branding solutions",
     title: "NYX VARIANT",
     subtitle: "(BRASIL)",

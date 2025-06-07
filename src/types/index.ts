@@ -19,3 +19,32 @@ export interface ProjectCardProps {
 export interface ViewMoreCardProps {
   onClick?: () => void;
 }
+
+export interface Testimonial {
+  id: number;
+  quote: string;
+  author: string;
+  position: string;
+  company: string;
+  avatar?: string;
+  caseStudyLink?: string;
+}
+
+export interface TestimonialSectionProps {
+  testimonials?: Testimonial[];
+}
+
+export interface FeaturedProject {
+  id: number;
+  title: string;
+  location: string;
+  year: string;
+  description: string;
+  imageSrc: string;
+  imageAlt: string;
+  slug?: string;
+}
+
+export interface FeaturedProjectsProps {
+  projects?: FeaturedProject[];
+}
