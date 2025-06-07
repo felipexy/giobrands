@@ -9,3 +9,5 @@ export { default as ViewMoreCard } from "./ViewMoreCard";
 export { default as TestimonialSection } from "./TestimonialSection";
 export { default as FeaturedProjectsSection } from "./FeaturedProjectsSection";
 export { default as AboutAuthorSection } from "./AboutAuthorSection";
+export { default as ServicesSection } from "./ServicesSection";
+export { default as ContactSection } from "./ContactSection";

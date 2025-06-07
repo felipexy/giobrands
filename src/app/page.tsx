@@ -7,6 +7,8 @@ import {
   TestimonialSection,
   FeaturedProjectsSection,
   AboutAuthorSection,
+  ServicesSection,
+  ContactSection,
 } from "@/components";
 
 export default function Home() {
@@ -20,6 +22,8 @@ export default function Home() {
       <FeaturedProjectsSection />
       <AboutAuthorSection />
       <StatsSection />
+      <ServicesSection />
+      <ContactSection />
     </div>
   );
 }
