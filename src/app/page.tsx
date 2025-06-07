@@ -9,6 +9,7 @@ import {
   AboutAuthorSection,
   ServicesSection,
   ContactSection,
+  Footer,
 } from "@/components";
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
       <StatsSection />
       <ServicesSection />
       <ContactSection />
+      <Footer />
     </div>
   );
 }

@@ -11,3 +11,4 @@ export { default as FeaturedProjectsSection } from "./FeaturedProjectsSection";
 export { default as AboutAuthorSection } from "./AboutAuthorSection";
 export { default as ServicesSection } from "./ServicesSection";
 export { default as ContactSection } from "./ContactSection";
+export { default as Footer } from "./Footer";
