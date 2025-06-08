@@ -17,25 +17,27 @@ export default function ProjectsSection() {
 
   return (
     <section className="px-24 py-16">
-      <h2 className="text-base font-medium text-gray-900 mb-9 tracking-wide">
-        ÚLTIMOS PROJETOS
-      </h2>
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-base font-medium text-gray-900 mb-9 tracking-wide">
+          ÚLTIMOS PROJETOS
+        </h2>
 
-      <div className="grid grid-cols-2 gap-3 max-w-6xl">
-        {/* Render project cards */}
-        {featuredProjects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            imageSrc={project.imageSrc}
-            imageAlt={project.imageAlt}
-            title={project.title}
-            subtitle={project.subtitle}
-            onClick={() => handleProjectClick(project.id)}
-          />
-        ))}
+        <div className="grid grid-cols-2 gap-3">
+          {/* Render project cards */}
+          {featuredProjects.map((project) => (
+            <ProjectCard
+              key={project.id}
+              imageSrc={project.imageSrc}
+              imageAlt={project.imageAlt}
+              title={project.title}
+              subtitle={project.subtitle}
+              onClick={() => handleProjectClick(project.id)}
+            />
+          ))}
 
-        {/* Ver Mais Button */}
-        <ViewMoreCard onClick={handleViewMoreClick} />
+          {/* Ver Mais Button */}
+          <ViewMoreCard onClick={handleViewMoreClick} />
+        </div>
       </div>
     </section>
   );
