@@ -5,53 +5,73 @@ import Image from "next/image";
 const projects = [
   {
     id: 1,
-    title: "Test Project",
-    image: "/assets/jpgs/projects/dona-varda/dona-varda-cover.jpg",
+    title: "NYX",
+    image: "/assets/jpgs/projects/nyx/nyx-cover.jpg",
   },
   {
     id: 2,
-    title: "Test Project",
+    title: "Dona Varda",
     image: "/assets/jpgs/projects/dona-varda/dona-varda-cover.jpg",
   },
   {
     id: 3,
-    title: "Test Project",
-    image: "/assets/jpgs/projects/dona-varda/dona-varda-cover.jpg",
+    title: "Thiber",
+    image: "/assets/jpgs/projects/thiber/thiber-cover.jpg",
   },
   {
     id: 4,
-    title: "Test Project",
-    image: "/assets/jpgs/projects/dona-varda/dona-varda-cover.jpg",
+    title: "Bike",
+    image: "/assets/jpgs/projects/bike/bike-cover.jpg",
   },
   {
     id: 5,
-    title: "Test Project",
-    image: "/assets/jpgs/projects/dona-varda/dona-varda-cover.jpg",
+    title: "Mobile App",
+    image: "/assets/jpgs/projects/mobile-app/mobile-app-cover.jpg",
   },
   {
     id: 6,
-    title: "Test Project",
-    image: "/assets/jpgs/projects/dona-varda/dona-varda-cover.jpg",
+    title: "Bagby",
+    image: "/assets/jpgs/projects/bagby/bagby-cover.jpg",
   },
   {
     id: 7,
-    title: "Test Project",
-    image: "/assets/jpgs/projects/dona-varda/dona-varda-cover.jpg",
+    title: "Beynum",
+    image: "/assets/jpgs/projects/beynum/beynum-cover.jpg",
   },
   {
     id: 8,
-    title: "Test Project",
-    image: "/assets/jpgs/projects/dona-varda/dona-varda-cover.jpg",
+    title: "Mobile App 2",
+    image: "/assets/jpgs/projects/mobile-app-2/mobile-app-2-cover.jpg",
   },
   {
     id: 9,
-    title: "Test Project",
-    image: "/assets/jpgs/projects/dona-varda/dona-varda-cover.jpg",
+    title: "Tavros",
+    image: "/assets/jpgs/projects/tavros/tavros-cover.jpg",
   },
   {
     id: 10,
-    title: "Test Project",
-    image: "/assets/jpgs/projects/dona-varda/dona-varda-cover.jpg",
+    title: "Kampeki",
+    image: "/assets/jpgs/projects/kampeki/kampeki-cover.jpg",
+  },
+  {
+    id: 11,
+    title: "Finance",
+    image: "/assets/jpgs/projects/finance/finance-cover.jpg",
+  },
+  {
+    id: 12,
+    title: "Omega",
+    image: "/assets/jpgs/projects/omega/omega-cover.jpg",
+  },
+  {
+    id: 13,
+    title: "Universo Sugar",
+    image: "/assets/jpgs/projects/universo-sugar/universo-sugar-cover.jpg",
+  },
+  {
+    id: 14,
+    title: "Fram Way",
+    image: "/assets/jpgs/projects/fram-way/fram-way-cover.jpg",
   },
 ];
 
@@ -73,7 +93,7 @@ const SelectedProjectsSection = () => {
             mostrando marcas impactantes e soluções criativas.
           </p>
           <button
-            className="text-white px-8 py-3 rounded-full font-medium hover:opacity-80 transition-all duration-300"
+            className="text-white px-8 py-3 rounded-full font-medium hover:opacity-80 transition-all duration-300 cursor-pointer"
             style={{ backgroundColor: "#ABABAB" }}
           >
             Fale conosco

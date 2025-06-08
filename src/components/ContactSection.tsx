@@ -21,7 +21,7 @@ export default function ContactSection() {
             </h2>
 
             {/* CTA Button */}
-            <button className="bg-black text-white px-8 py-4 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors w-fit">
+            <button className="bg-black cursor-pointer text-white px-8 py-4 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors w-fit">
               Trabalhe Comigo
             </button>
           </div>

@@ -22,7 +22,7 @@ export default function Header() {
       </div>
 
       <div className="justify-self-end">
-        <button className="text-gray-900 hover:text-gray-600 transition-all duration-300 font-medium relative border-b-2 border-transparent hover:border-gray-900">
+        <button className="text-gray-900 cursor-pointer hover:text-gray-600 transition-all duration-300 font-medium relative border-b-2 border-transparent hover:border-gray-900">
           Faça acontecer
         </button>
       </div>
