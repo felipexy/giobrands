@@ -1,18 +1,21 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import ProjectCard from "./ProjectCard";
 import ViewMoreCard from "./ViewMoreCard";
 import { featuredProjects } from "@/data/projects";
 
 export default function ProjectsSection() {
+  const router = useRouter();
+
   const handleProjectClick = (projectId: number) => {
     // Navigate to project page - you can implement this with Next.js router
     console.log(`Navigate to project ${projectId}`);
   };
 
   const handleViewMoreClick = () => {
-    // Navigate to projects listing page
-    console.log("Navigate to all projects");
+    // Navigate to selected projects page
+    router.push("/selectedProjects");
   };
 
   return (

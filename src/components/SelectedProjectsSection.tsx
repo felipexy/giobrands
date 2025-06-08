@@ -77,35 +77,35 @@ const projects = [
 
 const SelectedProjectsSection = () => {
   return (
-    <section className="py-20 bg-white">
-      <div className="mx-24">
+    <section className="py-10 md:py-20 bg-white">
+      <div className="mx-4 md:mx-12 lg:mx-24">
         {/* Header */}
-        <div className="text-center mb-16 px-6">
-          <h2 className="text-3xl md:text-5xl font-bold text-black mb-6 tracking-wider">
+        <div className="text-center mb-8 md:mb-16 px-2 md:px-6">
+          <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-black mb-4 md:mb-6 tracking-wider">
             PROJETOS
             <br />
             SELECIONADOS
           </h2>
-          <p className="text-gray-600 text-base max-w-2xl mx-auto mb-8 leading-relaxed">
+          <p className="text-gray-600 text-sm md:text-base max-w-xl md:max-w-2xl mx-auto mb-6 md:mb-8 leading-relaxed px-4 md:px-0">
             Explore nossa coleção cuidadosamente selecionada de projetos que
             demonstram uma ampla gama de projetos. Estes casos focam em
             representar algumas de nossas obras favoritas dos últimos anos,
             mostrando marcas impactantes e soluções criativas.
           </p>
           <button
-            className="text-white px-8 py-3 rounded-full font-medium hover:opacity-80 transition-all duration-300 cursor-pointer"
+            className="text-white px-6 md:px-8 py-2 md:py-3 rounded-full font-medium hover:opacity-80 transition-all duration-300 cursor-pointer text-sm md:text-base"
             style={{ backgroundColor: "#ABABAB" }}
           >
             Fale conosco
           </button>
         </div>
 
-        {/* Projects Grid - Always 2 columns */}
-        <div className="grid grid-cols-2 gap-2">
+        {/* Projects Grid - Always 2 columns, but responsive heights */}
+        <div className="grid grid-cols-2 gap-1 md:gap-2">
           {projects.map((project) => (
             <div
               key={project.id}
-              className="relative overflow-hidden rounded-lg group cursor-pointer h-64 md:h-80"
+              className="relative overflow-hidden rounded-lg group cursor-pointer h-32 sm:h-48 md:h-64 lg:h-80"
             >
               <Image
                 src={project.image}
@@ -119,11 +119,11 @@ const SelectedProjectsSection = () => {
               <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto"></div>
               {/* Call to action que só aparece no hover */}
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto">
-                <div className="text-center">
-                  <p className="text-white text-lg font-medium mb-2">
+                <div className="text-center px-2">
+                  <p className="text-white text-sm md:text-lg font-medium mb-1 md:mb-2">
                     {project.title}
                   </p>
-                  <button className="bg-white text-black px-6 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors duration-200">
+                  <button className="bg-white text-black px-3 md:px-6 py-1 md:py-2 rounded-full font-medium hover:bg-gray-100 transition-colors duration-200 text-xs md:text-sm">
                     Ver detalhes
                   </button>
                 </div>
