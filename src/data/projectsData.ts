@@ -18,6 +18,7 @@ export interface ProjectDetail {
   challenge: string;
   solution: string;
   result: string;
+  additionalImages?: string[];
 }
 
 export const projectsData: ProjectDetail[] = [
@@ -50,6 +51,12 @@ export const projectsData: ProjectDetail[] = [
       "Developed a bold graphic system with strong typography and dynamic visual elements that can adapt across different event scales and contexts.",
     result:
       "A cohesive brand identity that successfully positions TLA as a premium event production agency in the competitive Berlin market.",
+    additionalImages: [
+      "/assets/jpgs/projects/nyx/nyx-1.jpg",
+      "/assets/jpgs/projects/nyx/nyx-2.jpg",
+      "/assets/jpgs/projects/nyx/nyx-3.jpg",
+      "/assets/jpgs/projects/nyx/nyx-4.jpg",
+    ],
   },
   {
     id: 2,
@@ -80,6 +87,12 @@ export const projectsData: ProjectDetail[] = [
       "The visual concept was born from the idea of human concentration and collective energy — a metaphor for the intensity of concerts and festivals led by TLA. This concept took shape in a dotted graphic system, inspired by heat maps and digital flows, symbolizing audience presence and the brand’s power to ignite experiences. A brutalist typographic approach combined with a minimal palette of black, white, and red reinforces the contrast between chaos and control — two central elements in the agency’s work.",
     result:
       "Successful brand launch that has helped establish Dona Varda as a beloved local dining destination.",
+    additionalImages: [
+      "/assets/jpgs/projects/dona-varda/dona-varda-1.jpg",
+      "/assets/jpgs/projects/dona-varda/dona-varda-2.jpg",
+      "/assets/jpgs/projects/dona-varda/dona-varda-3.jpg",
+      "/assets/jpgs/projects/dona-varda/dona-varda-4.jpg",
+    ],
   },
   {
     id: 3,
@@ -110,6 +123,12 @@ export const projectsData: ProjectDetail[] = [
       "Designed a sophisticated yet approachable brand that emphasizes innovation and reliability.",
     result:
       "Strong brand foundation that supports Thiber's growth in the competitive technology market.",
+    additionalImages: [
+      "/assets/jpgs/projects/thiber/thiber-1.jpg",
+      "/assets/jpgs/projects/thiber/thiber-2.jpg",
+      "/assets/jpgs/projects/thiber/thiber-3.jpg",
+      "/assets/jpgs/projects/thiber/thiber-4.jpg",
+    ],
   },
   {
     id: 4,
@@ -140,6 +159,12 @@ export const projectsData: ProjectDetail[] = [
       "Designed a flexible brand system that balances heritage cycling aesthetics with modern technology elements.",
     result:
       "Successful product launch with strong brand recognition in the urban mobility sector.",
+    additionalImages: [
+      "/assets/jpgs/projects/bike/bike-1.jpg",
+      "/assets/jpgs/projects/bike/bike-2.jpg",
+      "/assets/jpgs/projects/bike/bike-3.jpg",
+      "/assets/jpgs/projects/bike/bike-4.jpg",
+    ],
   },
   {
     id: 5,
@@ -170,6 +195,12 @@ export const projectsData: ProjectDetail[] = [
       "Developed a clean, security-focused interface with clear visual hierarchy and seamless user flows.",
     result:
       "App achieved 50,000+ downloads in the first quarter with 4.8-star rating on app stores.",
+    additionalImages: [
+      "/assets/jpgs/projects/mobile-app/mobile-app-1.jpg",
+      "/assets/jpgs/projects/mobile-app/mobile-app-2.jpg",
+      "/assets/jpgs/projects/mobile-app/mobile-app-3.jpg",
+      "/assets/jpgs/projects/mobile-app/mobile-app-4.jpg",
+    ],
   },
   {
     id: 6,
@@ -200,6 +231,12 @@ export const projectsData: ProjectDetail[] = [
       "Designed an elegant, minimalist identity that communicates premium quality and environmental responsibility.",
     result:
       "Successful brand launch with strong market presence and positive sustainability recognition.",
+    additionalImages: [
+      "/assets/jpgs/projects/bagby/bagby-1.jpg",
+      "/assets/jpgs/projects/bagby/bagby-2.jpg",
+      "/assets/jpgs/projects/bagby/bagby-3.jpg",
+      "/assets/jpgs/projects/bagby/bagby-4.jpg",
+    ],
   },
   {
     id: 7,
@@ -230,6 +267,12 @@ export const projectsData: ProjectDetail[] = [
       "Designed a bold, adaptable brand system that showcases creativity while maintaining professional credibility.",
     result:
       "Enhanced studio recognition leading to partnerships with major international brands.",
+    additionalImages: [
+      "/assets/jpgs/projects/beynum/beynum-1.jpg",
+      "/assets/jpgs/projects/beynum/beynum-2.jpg",
+      "/assets/jpgs/projects/beynum/beynum-3.jpg",
+      "/assets/jpgs/projects/beynum/beynum-4.jpg",
+    ],
   },
   {
     id: 8,
@@ -260,6 +303,12 @@ export const projectsData: ProjectDetail[] = [
       "Developed a balanced interface that presents information clearly while maintaining a calm, supportive atmosphere.",
     result:
       "App has helped over 100,000 users achieve their wellness goals with 89% user retention rate.",
+    additionalImages: [
+      "/assets/jpgs/projects/mobile-app-2/mobile-app-2-1.jpg",
+      "/assets/jpgs/projects/mobile-app-2/mobile-app-2-2.jpg",
+      "/assets/jpgs/projects/mobile-app-2/mobile-app-2-3.jpg",
+      "/assets/jpgs/projects/mobile-app-2/mobile-app-2-4.jpg",
+    ],
   },
   {
     id: 9,
@@ -290,6 +339,12 @@ export const projectsData: ProjectDetail[] = [
       "Designed a flexible brand architecture that maintains luxury standards while allowing for local customization.",
     result:
       "Successful expansion across three countries with consistent brand recognition and guest satisfaction.",
+    additionalImages: [
+      "/assets/jpgs/projects/tavros/tavros-1.jpg",
+      "/assets/jpgs/projects/tavros/tavros-2.jpg",
+      "/assets/jpgs/projects/tavros/tavros-3.jpg",
+      "/assets/jpgs/projects/tavros/tavros-4.jpg",
+    ],
   },
   {
     id: 10,
@@ -320,6 +375,12 @@ export const projectsData: ProjectDetail[] = [
       "Designed a sophisticated identity that emphasizes craftsmanship, precision, and racing pedigree.",
     result:
       "Established Kampeki as a premium brand with partnerships in professional racing circuits.",
+    additionalImages: [
+      "/assets/jpgs/projects/kampeki/kampeki-1.jpg",
+      "/assets/jpgs/projects/kampeki/kampeki-2.jpg",
+      "/assets/jpgs/projects/kampeki/kampeki-3.jpg",
+      "/assets/jpgs/projects/kampeki/kampeki-4.jpg",
+    ],
   },
   {
     id: 11,
@@ -350,6 +411,12 @@ export const projectsData: ProjectDetail[] = [
       "Developed a clean, trustworthy brand identity with clear information hierarchy and user-friendly interfaces.",
     result:
       "Platform launched with $50M in assets under management within the first six months.",
+    additionalImages: [
+      "/assets/jpgs/projects/finance/finance-1.jpg",
+      "/assets/jpgs/projects/finance/finance-2.jpg",
+      "/assets/jpgs/projects/finance/finance-3.jpg",
+      "/assets/jpgs/projects/finance/finance-4.jpg",
+    ],
   },
   {
     id: 12,
@@ -380,6 +447,12 @@ export const projectsData: ProjectDetail[] = [
       "Designed a refined brand system that honors Swiss watchmaking tradition while appealing to contemporary luxury consumers.",
     result:
       "Strengthened brand position in the luxury watch market with increased international recognition.",
+    additionalImages: [
+      "/assets/jpgs/projects/omega/omega-1.jpg",
+      "/assets/jpgs/projects/omega/omega-2.jpg",
+      "/assets/jpgs/projects/omega/omega-3.jpg",
+      "/assets/jpgs/projects/omega/omega-4.jpg",
+    ],
   },
   {
     id: 13,
@@ -410,6 +483,12 @@ export const projectsData: ProjectDetail[] = [
       "Designed a distinctive brand identity that communicates craftsmanship and quality while maintaining playful appeal.",
     result:
       "Successful expansion to five countries with strong brand recognition in the premium confectionery segment.",
+    additionalImages: [
+      "/assets/jpgs/projects/universo-sugar/universo-sugar-1.jpg",
+      "/assets/jpgs/projects/universo-sugar/universo-sugar-2.jpg",
+      "/assets/jpgs/projects/universo-sugar/universo-sugar-3.jpg",
+      "/assets/jpgs/projects/universo-sugar/universo-sugar-4.jpg",
+    ],
   },
   {
     id: 14,
@@ -440,6 +519,12 @@ export const projectsData: ProjectDetail[] = [
       "Designed a sophisticated brand identity that communicates both architectural expertise and environmental responsibility.",
     result:
       "Increased project inquiries by 200% and won three sustainability design awards in the first year.",
+    additionalImages: [
+      "/assets/jpgs/projects/fram-way/fram-way-1.jpg",
+      "/assets/jpgs/projects/fram-way/fram-way-2.jpg",
+      "/assets/jpgs/projects/fram-way/fram-way-3.jpg",
+      "/assets/jpgs/projects/fram-way/fram-way-4.jpg",
+    ],
   },
 ];
 

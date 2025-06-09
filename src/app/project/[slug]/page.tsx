@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { Header, Footer } from "@/components";
+import { Header, Footer, ContactSection } from "@/components";
 import { getProjectBySlug, getAllProjectSlugs } from "@/data/projectsData";
 import Image from "next/image";
 
@@ -148,6 +148,23 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         </div>
       </section>
 
+      {/* Additional Images Section */}
+      {project.additionalImages && project.additionalImages.length > 0 && (
+        <section className="mx-24 mb-8 space-y-8">
+          {project.additionalImages.map((image, index) => (
+            <div key={index}>
+              <Image
+                src={image}
+                alt={`${project.title} - Image ${index + 1}`}
+                width={1721}
+                height={792}
+                className="w-full h-[600px] object-cover rounded-lg"
+              />
+            </div>
+          ))}
+        </section>
+      )}
+      <ContactSection />
       <Footer />
     </div>
   );
