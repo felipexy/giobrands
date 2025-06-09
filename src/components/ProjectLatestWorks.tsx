@@ -1,14 +1,29 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { ProjectDetail, projectsData } from "@/data/projectsData";
 
 interface ProjectLatestWorksProps {
-  currentProject: ProjectDetail;
+  currentProject?: ProjectDetail;
 }
 
 export default function ProjectLatestWorks({
   currentProject,
 }: ProjectLatestWorksProps) {
+  const [randomProjects, setRandomProjects] = useState<ProjectDetail[]>([]);
+
+  useEffect(() => {
+    const filteredProjects = projectsData.filter((p) =>
+      currentProject ? p.slug !== currentProject.slug : true
+    );
+    const shuffledProjects = [...filteredProjects]
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 4);
+    setRandomProjects(shuffledProjects);
+  }, [currentProject]);
+
   return (
     <section className="mx-24 pt-4 mb-16">
       {/* Latest Works Header */}
@@ -28,11 +43,8 @@ export default function ProjectLatestWorks({
 
       {/* Other Projects Grid */}
       <div className="grid grid-cols-2 gap-2">
-        {projectsData
-          .filter((p) => p.slug !== currentProject.slug)
-          .sort(() => Math.random() - 0.5)
-          .slice(0, 4)
-          .map((otherProject) => (
+        {randomProjects.length > 0 &&
+          randomProjects.map((otherProject) => (
             <Link
               key={otherProject.slug}
               href={`/project/${otherProject.slug}`}

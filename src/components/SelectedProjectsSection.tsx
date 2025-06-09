@@ -98,8 +98,7 @@ const SelectedProjectsSection = () => {
   };
 
   const handleContactClick = () => {
-    // Navigate to contact section or page
-    console.log("Navigate to contact");
+    router.push("/contact");
   };
 
   return (

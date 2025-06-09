@@ -26,9 +26,12 @@ export default function Header() {
       </div>
 
       <div className="justify-self-end">
-        <button className="text-gray-900 cursor-pointer hover:text-gray-600 transition-all duration-300 font-medium relative border-b-2 border-transparent hover:border-gray-900 text-sm md:text-base">
+        <Link
+          href="/contact"
+          className="text-gray-900 cursor-pointer hover:text-gray-600 transition-all duration-300 font-medium relative border-b-2 border-transparent hover:border-gray-900 text-sm md:text-base"
+        >
           Faça acontecer
-        </button>
+        </Link>
       </div>
     </header>
   );
