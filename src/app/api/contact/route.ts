@@ -3,6 +3,11 @@ import { NextRequest, NextResponse } from "next/server";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+// Debug: verificar se a API key está carregada
+if (!process.env.RESEND_API_KEY) {
+  console.error("RESEND_API_KEY não encontrada no .env.local");
+}
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
@@ -19,15 +24,24 @@ export async function POST(request: NextRequest) {
     // Validação básica
     if (!name || !email || !brandName) {
       return NextResponse.json(
-        { error: "Name, email and brand name are required" },
+        { error: "Nome, email e nome da marca são obrigatórios" },
         { status: 400 }
       );
     }
 
+    // Verificar se a API key está presente
+    if (!process.env.RESEND_API_KEY) {
+      return NextResponse.json(
+        { error: "RESEND_API_KEY não configurada" },
+        { status: 500 }
+      );
+    }
+
     // Enviar email
+    console.log("Tentando enviar email...");
     const { data, error } = await resend.emails.send({
-      from: "GioBrands Contact <noreply@giobrands.co>",
-      to: ["hello@giobrands.co"],
+      from: "GioBrands <onboarding@resend.dev>",
+      to: ["delivered@resend.dev"], // Email de teste do Resend
       subject: `Novo contato de ${name} - ${brandName}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -72,19 +86,21 @@ export async function POST(request: NextRequest) {
     if (error) {
       console.error("Resend error:", error);
       return NextResponse.json(
-        { error: "Failed to send email" },
+        {
+          error: `Falha ao enviar email: ${error.message || JSON.stringify(error)}`,
+        },
         { status: 500 }
       );
     }
 
     return NextResponse.json(
-      { message: "Email sent successfully", id: data?.id },
+      { message: "Email enviado com sucesso", id: data?.id },
       { status: 200 }
     );
   } catch (error) {
     console.error("Contact API error:", error);
     return NextResponse.json(
-      { error: "Internal server error" },
+      { error: "Erro interno do servidor" },
       { status: 500 }
     );
   }

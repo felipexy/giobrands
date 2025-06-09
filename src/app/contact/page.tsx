@@ -87,14 +87,14 @@ export default function ContactPage() {
         {/* Header Section */}
         <div className="text-center mb-8">
           <h1 className="text-4xl md:text-5xl font-bold text-black mb-4 leading-tight">
-            LET&apos;S BRING YOUR
+            VAMOS TRAZER SUA
             <br />
-            VISION TO LIFE.
+            VISÃO À VIDA.
           </h1>
           <p className="text-sm text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Get in touch to discuss how we can transform your ideas into unique
-            visual realities, leveraging my commitment to excellence and
-            innovation to bring your vision to life.
+            Entre em contato para discutir como podemos transformar suas ideias
+            em realidades visuais únicas, aproveitando nosso compromisso com a
+            excelência e inovação para dar vida à sua visão.
           </p>
         </div>
 
@@ -109,8 +109,9 @@ export default function ContactPage() {
             </h3>
             <div className="text-sm text-gray-600 leading-relaxed">
               <p className="mb-4">
-                We will respond to your quote request within 24 hours. If your
-                request is urgent, feel free to contact us directly at{" "}
+                Responderemos sua solicitação de orçamento em até 24 horas. Se
+                sua solicitação for urgente, sinta-se à vontade para nos
+                contatar diretamente em{" "}
                 <a
                   href="mailto:hello@giobrands.co"
                   className="text-black underline"
@@ -127,14 +128,14 @@ export default function ContactPage() {
               {/* Name */}
               <div>
                 <label className="block text-sm font-medium text-black mb-2">
-                  Name
+                  Nome
                 </label>
                 <input
                   type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  placeholder="Your Name"
+                  placeholder="Seu Nome"
                   className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent text-sm text-black placeholder:text-gray-500"
                   required
                 />
@@ -150,7 +151,7 @@ export default function ContactPage() {
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  placeholder="Your Email"
+                  placeholder="Seu Email"
                   className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent text-sm text-black placeholder:text-gray-500"
                   required
                 />
@@ -159,14 +160,14 @@ export default function ContactPage() {
               {/* Brand Name */}
               <div>
                 <label className="block text-sm font-medium text-black mb-2">
-                  Name signed on your brand
+                  Nome da sua marca
                 </label>
                 <input
                   type="text"
                   name="brandName"
                   value={formData.brandName}
                   onChange={handleInputChange}
-                  placeholder="Brand Name"
+                  placeholder="Nome da Marca"
                   className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent text-sm text-black placeholder:text-gray-500"
                   required
                 />
@@ -175,7 +176,7 @@ export default function ContactPage() {
               {/* How did you get to Gio Brands */}
               <div>
                 <label className="block text-sm font-medium text-black mb-3">
-                  How did you get to Gio Brands?
+                  Como você conheceu a Gio Brands?
                 </label>
                 <div className="space-y-3">
                   {[
@@ -183,9 +184,9 @@ export default function ContactPage() {
                     "Website",
                     "Behance",
                     "LinkedIn",
-                    "Referral",
+                    "Indicação",
                     "Google",
-                    "Other",
+                    "Outro",
                   ].map((option) => (
                     <label key={option} className="flex items-center">
                       <input
@@ -204,14 +205,14 @@ export default function ContactPage() {
               {/* Company Segment */}
               <div>
                 <label className="block text-sm font-medium text-black mb-2">
-                  What is the company&apos;s segment?
+                  Qual é o segmento da empresa?
                 </label>
                 <input
                   type="text"
                   name="companySegment"
                   value={formData.companySegment}
                   onChange={handleInputChange}
-                  placeholder="Technology"
+                  placeholder="Tecnologia"
                   className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent text-sm text-black placeholder:text-gray-500"
                   required
                 />
@@ -220,14 +221,14 @@ export default function ContactPage() {
               {/* Brand Age */}
               <div>
                 <label className="block text-sm font-medium text-black mb-2">
-                  How long has the brand been established on the market?
+                  Há quanto tempo a marca está estabelecida no mercado?
                 </label>
                 <input
                   type="text"
                   name="brandAge"
                   value={formData.brandAge}
                   onChange={handleInputChange}
-                  placeholder="5 years"
+                  placeholder="5 anos"
                   className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent text-sm text-black placeholder:text-gray-500"
                   required
                 />
@@ -236,14 +237,14 @@ export default function ContactPage() {
               {/* Additional Info */}
               <div>
                 <label className="block text-sm font-medium text-black mb-2">
-                  Feel free to contribute with other pertinent information about
-                  your brand.
+                  Sinta-se à vontade para contribuir com outras informações
+                  relevantes sobre sua marca.
                 </label>
                 <textarea
                   name="additionalInfo"
                   value={formData.additionalInfo}
                   onChange={handleInputChange}
-                  placeholder="Share any additional relevant information about your brand."
+                  placeholder="Compartilhe qualquer informação adicional relevante sobre sua marca."
                   rows={6}
                   className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent text-sm text-black resize-none placeholder:text-gray-500"
                 />
@@ -253,7 +254,7 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full py-4 px-6 rounded-md font-medium text-sm tracking-wider transition-colors duration-300 ${
+                className={`w-full cursor-pointer py-4 px-6 rounded-md font-medium text-sm tracking-wider transition-colors duration-300 ${
                   isSubmitting
                     ? "bg-gray-400 text-gray-600 cursor-not-allowed"
                     : "bg-black text-white hover:bg-gray-800"

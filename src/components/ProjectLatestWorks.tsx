@@ -30,12 +30,12 @@ export default function ProjectLatestWorks({
       <div className="w-full h-px bg-gray-300 mb-4"></div>
       <div className="flex items-center justify-between mb-8">
         <div className="text-[13px] text-black">
-          Latest Works.{" "}
+          Últimos Trabalhos.{" "}
           <Link
             href="/selectedProjects"
             className="underline cursor-pointer text-gray-400 hover:text-gray-600 transition-colors"
           >
-            See more exciting here
+            Veja mais projetos interessantes aqui
           </Link>
         </div>
         <div className="text-[13px] text-black">(1 — 4)</div>
