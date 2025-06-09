@@ -14,6 +14,12 @@ export default function ContactPage() {
     additionalInfo: "",
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
+  const [submitMessage, setSubmitMessage] = useState("");
+
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -24,10 +30,53 @@ export default function ContactPage() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+    setSubmitMessage("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        setSubmitMessage(
+          "Mensagem enviada com sucesso! Entraremos em contato em breve."
+        );
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          brandName: "",
+          howFoundUs: "",
+          companySegment: "",
+          brandAge: "",
+          additionalInfo: "",
+        });
+      } else {
+        setSubmitStatus("error");
+        setSubmitMessage(
+          result.error || "Erro ao enviar mensagem. Tente novamente."
+        );
+      }
+    } catch (error) {
+      console.error("Submit error:", error);
+      setSubmitStatus("error");
+      setSubmitMessage(
+        "Erro ao enviar mensagem. Verifique sua conexão e tente novamente."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -203,10 +252,28 @@ export default function ContactPage() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full bg-black text-white py-4 px-6 rounded-md hover:bg-gray-800 transition-colors duration-300 font-medium text-sm tracking-wider"
+                disabled={isSubmitting}
+                className={`w-full py-4 px-6 rounded-md font-medium text-sm tracking-wider transition-colors duration-300 ${
+                  isSubmitting
+                    ? "bg-gray-400 text-gray-600 cursor-not-allowed"
+                    : "bg-black text-white hover:bg-gray-800"
+                }`}
               >
-                Enviar
+                {isSubmitting ? "Enviando..." : "Enviar"}
               </button>
+
+              {/* Success/Error Messages */}
+              {submitStatus !== "idle" && (
+                <div
+                  className={`mt-4 p-4 rounded-md text-sm ${
+                    submitStatus === "success"
+                      ? "bg-green-50 text-green-800 border border-green-200"
+                      : "bg-red-50 text-red-800 border border-red-200"
+                  }`}
+                >
+                  {submitMessage}
+                </div>
+              )}
             </form>
           </div>
         </div>
