@@ -12,4 +12,8 @@ export { default as SelectedProjectsSection } from "./SelectedProjectsSection";
 export { default as AboutAuthorSection } from "./AboutAuthorSection";
 export { default as ServicesSection } from "./ServicesSection";
 export { default as ContactSection } from "./ContactSection";
+export { default as ProjectHeroSection } from "./ProjectHeroSection";
+export { default as ProjectContentSection } from "./ProjectContentSection";
+export { default as ProjectAdditionalImages } from "./ProjectAdditionalImages";
+export { default as ProjectLatestWorks } from "./ProjectLatestWorks";
 export { default as Footer } from "./Footer";
