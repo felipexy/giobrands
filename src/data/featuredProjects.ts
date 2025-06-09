@@ -3,14 +3,14 @@ import { FeaturedProject } from "@/types";
 export const featuredProjectsList: FeaturedProject[] = [
   {
     id: 1,
-    title: "TAVROS",
+    title: "NYX",
     location: "Australia",
     year: "2025",
     description:
-      "DownUnder Merch is an Australian lifestyle brand bridging the rugged essence of the outback with modern sophistication. Offering premium apparel and accessories, the brand connects authenticity and global appeal.",
+      "NYX is a brand that sells products to the public. It is a brand that is known for its quality and its price.",
     imageSrc: "/assets/jpgs/projects/nyx/nyx-cover.jpg",
-    imageAlt: "TAVROS Wine Card - Premium branding experience",
-    slug: "tavros-wine",
+    imageAlt: "NYX Card - Premium branding experience",
+    slug: "nyx",
   },
   {
     id: 2,

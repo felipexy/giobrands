@@ -41,7 +41,7 @@ export default function ViewMoreCard({ onClick }: ViewMoreCardProps) {
         </div>
 
         {/* Ver Mais Button */}
-        <div className="absolute z-30 bg-black text-white px-8 py-3 rounded-full font-medium tracking-wide transition-all duration-300 group-hover:scale-105 shadow-2xl">
+        <div className="absolute z-30 bg-black opacity-80 text-white px-8 py-3 rounded-full font-medium tracking-wide transition-all duration-300 group-hover:scale-105 shadow-2xl">
           VER MAIS
         </div>
       </div>

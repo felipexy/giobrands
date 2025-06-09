@@ -1,7 +1,12 @@
 import { notFound } from "next/navigation";
 import { Header, Footer, ContactSection } from "@/components";
-import { getProjectBySlug, getAllProjectSlugs } from "@/data/projectsData";
+import {
+  getProjectBySlug,
+  getAllProjectSlugs,
+  projectsData,
+} from "@/data/projectsData";
 import Image from "next/image";
+import Link from "next/link";
 
 interface ProjectPageProps {
   params: {
@@ -48,9 +53,12 @@ export default function ProjectPage({ params }: ProjectPageProps) {
               <span className="tracking-wider font-bold">{project.year}</span>
             </div>
             <div>
-              <span className="tracking-wider text-black font-bold cursor-pointer transition-colors">
+              <a
+                href="#content"
+                className="tracking-wider text-black font-bold cursor-pointer transition-colors hover:text-gray-600"
+              >
                 LEIA MAIS
-              </span>
+              </a>
             </div>
           </div>
         </div>
@@ -68,7 +76,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
       </div>
 
       {/* Content Section */}
-      <section className="mx-24 py-16">
+      <section id="content" className="mx-24 py-16">
         <div className="grid grid-cols-12 gap-16">
           {/* Left Column - Title and Categories */}
           <div className="col-span-6">
@@ -150,7 +158,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 
       {/* Additional Images Section */}
       {project.additionalImages && project.additionalImages.length > 0 && (
-        <section className="mx-24 mb-8 space-y-8">
+        <section className="mx-24 mb-4 space-y-4">
           {project.additionalImages.map((image, index) => (
             <div key={index}>
               <Image
@@ -164,6 +172,54 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           ))}
         </section>
       )}
+
+      {/* Latest Works Section */}
+      <section className="mx-24 pt-4 pb-8">
+        <div className="w-full h-px bg-gray-300 mb-4"></div>
+        <div className="flex items-center justify-between">
+          <div className="text-[13px] text-black">
+            Latest Works.{" "}
+            <span className="underline cursor-pointer text-gray-400">
+              See more exciting here
+            </span>
+          </div>
+          <div className="text-[13px] text-black">(1 — 4)</div>
+        </div>
+      </section>
+
+      {/* Other Projects Section */}
+      <section className="mx-24 mb-16">
+        <div className="grid grid-cols-2 gap-2">
+          {projectsData
+            .filter((p) => p.slug !== project.slug)
+            .sort(() => Math.random() - 0.5)
+            .slice(0, 4)
+            .map((otherProject) => (
+              <Link
+                key={otherProject.slug}
+                href={`/project/${otherProject.slug}`}
+              >
+                <div className="relative group cursor-pointer hover:z-10">
+                  <Image
+                    src={otherProject.coverImage}
+                    alt={otherProject.title}
+                    width={800}
+                    height={600}
+                    className="w-full h-[300px] object-cover rounded-lg transition-all duration-300 group-hover:scale-105 group-hover:brightness-75"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <span className="text-black text-sm font-medium tracking-wider opacity-80 bg-white bg-opacity-70 px-4 py-2 rounded-full">
+                        VER MAIS
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+        </div>
+      </section>
+
       <ContactSection />
       <Footer />
     </div>

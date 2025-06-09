@@ -151,7 +151,7 @@ const SelectedProjectsSection = () => {
                   <p className="text-white text-sm md:text-lg font-medium mb-1 md:mb-2">
                     {project.title}
                   </p>
-                  <button className="bg-white cursor-pointer text-black px-3 md:px-6 py-1 md:py-2 rounded-full font-medium hover:bg-gray-100 transition-colors duration-200 text-xs md:text-sm">
+                  <button className="bg-white opacity-80 cursor-pointer text-black px-3 md:px-6 py-1 md:py-2 rounded-full font-medium hover:bg-gray-100 transition-colors duration-200 text-xs md:text-sm">
                     Ver detalhes
                   </button>
                 </div>

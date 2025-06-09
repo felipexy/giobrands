@@ -1,12 +1,24 @@
 "use client";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { featuredProjectsList } from "@/data/featuredProjects";
 
 export default function FeaturedProjectsSection() {
+  const router = useRouter();
+
   const handleProjectClick = (slug?: string) => {
-    // Navigate to project detail page
-    console.log(`Navigate to project: ${slug}`);
+    // Map featured project slugs to actual project slugs
+    const slugMap: { [key: string]: string } = {
+      "tavros-wine": "tavros",
+      "dona-varda": "dona-varda",
+      "tech-innovate": "thiber",
+    };
+
+    if (slug) {
+      const actualSlug = slugMap[slug] || slug;
+      router.push(`/project/${actualSlug}`);
+    }
   };
 
   return (

@@ -9,8 +9,17 @@ export default function ProjectsSection() {
   const router = useRouter();
 
   const handleProjectClick = (projectId: number) => {
-    // Navigate to project page - you can implement this with Next.js router
-    console.log(`Navigate to project ${projectId}`);
+    // Map project IDs to correct slugs
+    const projectSlugMap: { [key: number]: string } = {
+      1: "nyx", // NYX project
+      2: "dona-varda", // HERO PROJECT -> Dona Varda
+      3: "thiber", // NYX VARIANT -> Thiber
+    };
+
+    const slug = projectSlugMap[projectId];
+    if (slug) {
+      router.push(`/project/${slug}`);
+    }
   };
 
   const handleViewMoreClick = () => {
