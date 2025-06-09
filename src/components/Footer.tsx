@@ -9,8 +9,8 @@ export default function Footer() {
   };
 
   return (
-    <footer className="py-8 px-24" style={{ backgroundColor: "#FFFFFF" }}>
-      <div className="max-w-6xl mx-auto">
+    <footer className="py-8 mx-24" style={{ backgroundColor: "#FFFFFF" }}>
+      <div>
         {/* Horizontal Line */}
         <div className="w-full h-px bg-gray-300 mb-8"></div>
 

@@ -25,7 +25,7 @@ export default function ProjectsSection() {
           ÚLTIMOS PROJETOS
         </h2>
 
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-3 cursor-pointer">
           {/* Render project cards */}
           {featuredProjects.map((project) => (
             <ProjectCard
