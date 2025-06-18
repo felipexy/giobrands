@@ -10,12 +10,6 @@ import {
 } from "@/components";
 import { getProjectBySlug, getAllProjectSlugs } from "@/data/projectsData";
 
-interface ProjectPageProps {
-  params: {
-    slug: string;
-  };
-}
-
 export async function generateStaticParams() {
   const slugs = getAllProjectSlugs();
   return slugs.map((slug) => ({
@@ -23,7 +17,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function ProjectPage({ params }: ProjectPageProps) {
+export default function ProjectPage({ params }: { params: { slug: string } }) {
   const project = getProjectBySlug(params.slug);
 
   if (!project) {
