@@ -17,7 +17,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default function ProjectPage({ params }: any) {
   const project = getProjectBySlug(params.slug);
 
   if (!project) {
